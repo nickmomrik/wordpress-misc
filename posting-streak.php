@@ -13,7 +13,7 @@ function posting_streak( $blog_id, $after = '' ) {
 	}
 
 	$posts = $wpdb->get_col(
-		"SELECT post_date_gmt
+		"SELECT post_date
 		FROM $wpdb->posts
 		WHERE post_type = 'post'
 		AND post_status = 'publish'
@@ -77,9 +77,9 @@ function posting_streak( $blog_id, $after = '' ) {
 		}
 		echo ' to keep it going!';
 	} else {
-		echo "$slump_days day slump, since $last_post_day";
+		echo "$slump_days day slump. Last post was on $last_post_day.";
 	}
-	echo "\n\nKeep in mind these are GMT dates, where it is currently " . date( 'Y-m-d' ) . ".\n\n";
+	echo "\n\n";
 
 	restore_current_blog();
 }
