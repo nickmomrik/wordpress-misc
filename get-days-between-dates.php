@@ -76,9 +76,3 @@ function get_days_between_dates( $start_date, $end_date, $types = array() ) {
 
 	return $count;
 }
-
-echo get_days_between_dates( '2017-08-21', '2017-09-03' ) . "\n";
-echo get_days_between_dates( '2017-08-21', '2017-09-03', array( 'weekday', 'weekend' ) ) . "\n";
-echo get_days_between_dates( '2017-08-21', '2017-09-03', array( 'mon' ) ) . "\n";
-echo get_days_between_dates( '2017-08-21', '2017-09-03', array( 'weekday' ) ) . "\n";
-echo get_days_between_dates( '2017-08-21', '2017-09-03', array( 'mon', 'wednesday', 'fri' ) ) . "\n";
